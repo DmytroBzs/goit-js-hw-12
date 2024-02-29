@@ -1,10 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-export function render(images) {
-  const imgList = document.querySelector(`.img-list`);
-  imgList.innerHTML = '';
+export const imgList = document.querySelector('.img-list');
 
+export function render(images) {
   const markup = images.hits
     .map(image => {
       return `<li class="list-item">
@@ -34,8 +33,8 @@ export function render(images) {
   const lightbox = new SimpleLightbox('.list-item a', {
     captionDelay: 250,
     captionSelector: 'img',
-    captionsData: 'alt',
     scrollZoom: false,
+    captionsData: 'alt',
     fadeSpeed: 250,
   });
 
