@@ -5,6 +5,8 @@ section {
 .box {
   padding-bottom: 70px;
 }
+.search-form {
+}
 .form {
   display: flex;
   justify-content: center;
@@ -115,7 +117,7 @@ section {
   height: 64px;
   animation: spin 1s linear infinite;
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;

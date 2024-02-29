@@ -2,11 +2,10 @@ import { fetchImages, input } from './js/pixabay-api';
 import { render, imgList } from './js/render-functions';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-export const loader = document.querySelector('.loader');
-export const loadBtn = document.querySelector('.load-btn');
+const loader = document.querySelector('.loader');
+const loadBtn = document.querySelector('.load-btn');
 const form = document.querySelector('.form');
-export let page = 1;
-export const limit = 15;
+let page = 1;
 let posts;
 
 form.addEventListener(`submit`, formSearch);

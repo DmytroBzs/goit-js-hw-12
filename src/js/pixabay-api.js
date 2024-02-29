@@ -1,8 +1,5 @@
 import axios from 'axios';
-import { page, limit } from '../main.js';
-import { imgList } from './render-functions.js';
 export const input = document.querySelector(`.input`);
-
 export async function fetchImages() {
   let correctInput = input.value.split(' ').join('+');
 
@@ -12,8 +9,8 @@ export async function fetchImages() {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: 'true',
-    per_page: limit,
-    page: page,
+    per_page: 15,
+    page: 1,
   });
 
   const response = await axios.get(`https://pixabay.com/api/?${parameters}`);
