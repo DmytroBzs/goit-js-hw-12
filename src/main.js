@@ -6,24 +6,22 @@ const loader = document.querySelector('.loader');
 const loadBtn = document.querySelector('.load-btn');
 const form = document.querySelector('.form');
 let page = 1;
-let posts;
 
 form.addEventListener(`submit`, formSearch);
 
 async function formSearch(event) {
+  event.preventDefault();
   page = 1;
 
   const inputTrim = input.value.trim();
   if (inputTrim === '') {
-    event.preventDefault();
     form.reset();
     return;
   }
 
-  event.preventDefault();
   clearImgList();
   try {
-    posts = await fetchImages();
+    const posts = await fetchImages();
     render(posts);
     form.reset();
     loader.classList.remove('hidden');
@@ -53,7 +51,7 @@ async function loadMore(event) {
   page += 1;
 
   try {
-    posts = await fetchImages();
+    const posts = await fetchImages();
     render(posts);
 
     ScrollBy(750);
@@ -67,6 +65,11 @@ async function loadMore(event) {
     }
   } catch (error) {
     console.log(error);
+    iziToast.error({
+      message:
+        'An error occurred while fetching more images. Please try again later.',
+      position: 'topRight',
+    });
   }
 }
 
