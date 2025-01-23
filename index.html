@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PicHunt</title>
+    
+    <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-da186403.js">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-a51daae5.css">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-0dbc8e18.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PicHunt</title>
-  
-  <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-da186403.js">
-  <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-a51daae5.css">
-  <link rel="stylesheet" href="/goit-js-hw-12/assets/index-cf1028ff.css">
-</head>
-
-<body>
-  <section class="container">
-    <form class="form">
-      <div class="box">
-        <span class="loader hidden"></span>
-        <div class="search-form"> <input type="text" class="input" placeholder="Search images...">
+  <body>
+    <section class="container">
+      <form class="form">
+        <div class="search-form">
+          <input type="text" class="input" placeholder="Search images..." />
           <button class="btn" type="submit">Search</button>
         </div>
-        <ul class="img-list">
-        </ul>
-      </div>
-      <button class="load-btn hidden">Load more</button>
-    </form>
-
-  </section>
-  
-</body>
-
+        <span class="loader hidden"></span>
+        <ul class="img-list"></ul>
+        <button class="load-btn hidden">Load more</button>
+      </form>
+    </section>
+    
+  </body>
 </html>
